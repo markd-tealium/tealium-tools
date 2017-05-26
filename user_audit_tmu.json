@@ -7,7 +7,7 @@
     "_tagAudit": {
      "title": "User Audit",  
      "auto_inject": true,
-     "js": "http://partners.tealium.net/js/pagecode_tmu.js",
+     "js": "https://raw.githubusercontent.com/markd-tealium/tealium-tools/master/pagecode_tmu.js",
      "template": "https://solutions.tealium.net/hosted/tealiumTools/user_audit/ui.html",
      "remote_js": true,
      "remote_template": true
