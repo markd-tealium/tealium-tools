@@ -1,0 +1,16 @@
+
+{
+  "id": "tmu_user_audit",
+  "title": "TMU User Audit",
+  "description": "",
+  "scripts": {
+    "_tagAudit": {
+     "title": "User Audit",  
+     "auto_inject": true,
+     "js": "https://cdn.jsdelivr.net/gh/markd-tealium/tealium-tools@2/pagecode_tmu.js",
+     "template": "https://solutions.tealium.net/hosted/tealiumTools/user_audit/ui.html",
+     "remote_js": true,
+     "remote_template": true
+    }
+  }
+}
