@@ -1,0 +1,16 @@
+
+{
+  "id": "add_users",
+  "title": "Add Users",
+  "description": "",
+  "scripts": {
+    "_users": {
+     "title": "Add User Tool",
+     "auto_inject": true,
+     "js": "https://solutions.tealium.net/hosted/tealiumTools/add_users/pageCode.js",
+     "template": "https://solutions.tealium.net/hosted/tealiumTools/add_users/ui.html",
+     "remote_js": true,
+     "remote_template": true
+    }
+  }
+}
