@@ -2,8 +2,8 @@
 (function() {
     "use strict";
     try {
-        if (/^https\:\/\/tmu\-my\.tealiumiq\.com\/tms/.test(document.URL)) {
-            var users_mapping = {
+    if (/^https\:\/\/(my|sso)\.tealiumiq\.com\/tms/.test(document.URL)) {
+    var users_mapping = {
                 "developer-admin": {
                     profilePermissions: ["MANAGE_USERS", "MANAGE_TEMPLATES", "MANAGE_SECURE_LABELS", "SAVE_PROFILE", "COPY", "PUBLISH_DEV", "PUBLISH_QA", "PUBLISH_PROD"],
                     accountPermissions: ["MANAGE_ACCOUNT", "MANAGE_AUDIT", "CREATE_PROFILE", "EXTENSIONS_JAVASCRIPT"]
