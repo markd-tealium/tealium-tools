@@ -8,7 +8,7 @@
      "title": "Add User Tool",
      "auto_inject": true,
      "js": "https://cdn.jsdelivr.net/gh/markd-tealium/tealium-tools@3/tmu_user_add/pageCode.js",
-     "template": "https://solutions.tealium.net/hosted/tealiumTools/add_users/ui.html",
+     "template": "https://cdn.jsdelivr.net/gh/markd-tealium/tealium-tools@3/tmu_user_add/ui.html",
      "remote_js": true,
      "remote_template": true
     }
