@@ -1,0 +1,74 @@
+
+<script type="text/x-handataLayerebars">
+<span id="account" style="display:none;">{{account}}</span>
+    <div class="custom-tool-intro row">
+        <div class="col-xs-12">
+            <img class="custom-tool-icon" src="https://tealium-tools.s3.amazonaws.com/tools/logo.png">
+            <p>A tool to quickly add users based on roles.</p>
+            <br />
+            <label>Select the users role</label><br />
+            <select id="user" name="role" class="form-control">
+                <option value="n/a" selected>---</option>
+                <option value="developer-admin">Developer (Admin)</option>
+                <option value="marketing-advanced">Marketing (Advanced)</option>
+            </select>
+            <br />
+            <label>Email Addresses of users (comma seperated): </label><input id="email" class="form-control"/>
+            <br />
+            <label>Enter the profiles required (comma seperated) or * for all current and future profiles</label>
+            <br />
+            <textarea name="profiles" class="form-control" style="height:9em;"/>
+        </div>
+    </div>
+
+<br>
+
+<button id="submit" class="btn btn-success">Add User</button>
+<br>
+<p style="padding-top: 4px;margin-bottom: -1px;">Comments / bugs / feature requests? Send them to
+   <a href="mailto:simon.browning@tealium.com">simon.browning@tealium.com</a>
+</p>
+<iframe id="tracker" src="" width="1" height="1" style="display:none"></iframe>
+    <script type="text/javascript">
+    {{#if processing}}
+        $("#loading-cover").show();
+    {{else}}
+        $("#loading-cover").hide();
+    {{/if}}
+    $("button#submit").attr("disabled","");
+    $("#user").on("change",function(){
+      if(this.value === "n/a"){
+      $("button#submit").attr("disabled","");
+    }else{
+      $("button#submit").removeAttr("disabled");
+    }
+
+    });
+        $("button#submit").on("click", function() {
+            //debugger;
+            var accounts = {};
+            var data = {};
+            data.profiles = [], data.emails = [];
+            var profiles = $("textarea").val().split(",");
+            var emails = $("#email").val().split(",");
+
+            for(var a in profiles){
+              var b = profiles[a].trim().toLowerCase();
+              b = b.replace(/\u200e/,'');
+
+              data.profiles.push(b);
+            }
+
+            for(var a in emails){
+              var b = emails[a].trim().toLowerCase();
+              b = b.replace(/\u200e/,'');
+
+              data.emails.push(b);
+            }
+
+            data.user = $("select").val();
+            tealiumTools.invokeFunction('_tt_users',data);
+             $('#tracker')[0].src = "https://solutions.tealium.net/hosted/tealiumTools/tracker.html?account=services-simon&profile=tealium-tools&tool=add_users";
+        })
+    </script>
+</script>
