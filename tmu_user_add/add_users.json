@@ -1,11 +1,11 @@
 
 {
-  "id": "add_users",
-  "title": "Add Users",
+  "id": "add__training_users",
+  "title": "Add Training Users",
   "description": "",
   "scripts": {
     "_users": {
-     "title": "Add User Tool",
+     "title": "Add Training User Tool",
      "auto_inject": true,
      "js": "https://cdn.jsdelivr.net/gh/markd-tealium/tealium-tools@3/tmu_user_add/pageCode.js",
      "template": "https://cdn.jsdelivr.net/gh/markd-tealium/tealium-tools@3/tmu_user_add/ui.html",
