@@ -9,7 +9,7 @@
                     accountPermissions: ["EXTENSIONS_JAVASCRIPT"]
                 },
                 "marketing-advanced": {
-                    profilePermissions: ["PUBLISH_DEV", "PUBLISH_QA", "MANAGE_TEMPLATES", "COPY"],
+                    profilePermissions: ["PUBLISH_DEV", "PUBLISH_QA", "MANAGE_TEMPLATES", "SAVE_PROFILE", "COPY"],
                     accountPermissions: ["EXTENSIONS_JAVASCRIPT"]
                 },
             };
